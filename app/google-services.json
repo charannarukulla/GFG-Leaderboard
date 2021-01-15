@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "602184254369",
+    "firebase_url": "https://play-ce96e.firebaseio.com",
+    "project_id": "play-ce96e",
+    "storage_bucket": "play-ce96e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602184254369:android:1c9064293b001c734941e0",
+        "android_client_info": {
+          "package_name": "com.charannarukulla.gfgleaderboardfeature"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602184254369-4dimcjel8nn7a042ss3qqv09i33t8hfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOUZPF5NhB6ni6-wOJ-d_gIxjwU0QYu5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602184254369-4dimcjel8nn7a042ss3qqv09i33t8hfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
