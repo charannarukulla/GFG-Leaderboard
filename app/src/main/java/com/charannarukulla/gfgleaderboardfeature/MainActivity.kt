@@ -35,6 +35,7 @@ effect.stopShimmerAnimation()
             adaptopr = LeaderBoardAdaptopr(this, playerModel)//constructor call
             rrv.adapter = adaptopr//Assigning adapter  to recyclerview
             rrv.setHasFixedSize(true)
+
             rrv.layoutManager = LinearLayoutManager(this)//Assigning layout manager
 
 
