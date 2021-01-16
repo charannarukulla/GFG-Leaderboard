@@ -18,11 +18,12 @@ class LeaderBoardAdaptopr(
         var rank=view.findViewById<TextView>(R.id.rank)//binding view
 
         var score=view.findViewById<TextView>(R.id.scorenumber)//binding view
+        var name=view.findViewById<TextView>(R.id.name)//binding view
         fun bind(position: Int) {//function that provides data to textviews
             var r=position+1//rank = Recyclerview position+1
-            rank.text=(r).toString()
-
-            score.text=  options?.get(position)?.score.toString()//score from data class list
+            rank.text="RANK:"+(r).toString()
+name.text=options?.get(position)?.name.toString()//name from data class list
+            score.text="SCORE:"+  options?.get(position)?.score.toString()//score from data class list
         }
     }
 

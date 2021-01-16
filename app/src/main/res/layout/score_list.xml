@@ -1,28 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Linearlayout as parent view -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
     android:orientation="vertical">
+    <!--MaterialCardView as parent view -->
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+app:cardCornerRadius="20dp"
+    android:padding="8dp"
+    app:cardElevation="10dp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+   >
+    <!--RelativeLayout as parent view -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="8dp"
+       >
+       <!--FrameLayout as parent view -->
+       <FrameLayout
+           android:id="@+id/frame"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/framelayout_circle"
+           android:padding="10dp"
+           >
     <!--Textview to display rank -->
     <TextView
         android:id="@+id/rank"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="0"
+        android:text="RANK:0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="50dp"
-        android:textStyle="italic" />
+        android:textSize="25dp"
+        android:textStyle="italic"
+        android:textColor="@color/cardview_light_background"
+
+        />
+           <!--FrameLayout end-->
+       </FrameLayout>
+       <!--Textview to display name -->
+       <TextView
+           android:id="@+id/name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:layout_marginLeft="18dp"
+
+           android:layout_toRightOf="@id/frame"
+           android:text="TestName"
+           android:textAppearance="@style/TextAppearance.AppCompat.Large"
+           android:textSize="18dp"
+           android:textStyle="bold|italic" />
     <!--Textview to display score -->
     <TextView
         android:id="@+id/scorenumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="testnumber"
+       android:layout_below="@id/name"
+        android:text="SCORE:0"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="50dp"
-        android:textStyle="italic" />
+        android:textSize="18dp"
+        android:layout_marginLeft="18dp"
+        android:textStyle="italic"
+        android:layout_toRightOf="@id/frame"
+        />
+       <!--RelativeLayout end -->
+   </RelativeLayout>
+    <!--MaterialCardView end -->
+</com.google.android.material.card.MaterialCardView>
     <!--Linearlayout end -->
+
 </LinearLayout>

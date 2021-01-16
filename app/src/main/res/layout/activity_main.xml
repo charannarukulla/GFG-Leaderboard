@@ -7,12 +7,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <!--ImageView to show leaderboard picture -->
+    <ImageView
+        android:id="@+id/leaderlogo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:foregroundGravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:src="@drawable/ic_baseline_leaderboard_24"
+        />
+    <!--TextView to show text "Leaderboard" -->
+    <TextView
+        android:id="@+id/llhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   app:layout_constraintTop_toBottomOf="@id/leaderlogo"
+android:gravity="center"
+        android:padding="8dp"
+
+
+        android:text="Leaderboard"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="18dp"
+        android:textStyle="bold|italic" />
+    <!--ShimmerFrameLayout start -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llhead"
+        android:orientation="vertical">
+
+        <!-- Adding 15 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+            <include layout="@layout/scorelist_placeholder" />
+        </LinearLayout>
+        <!--ShimmerFrameLayout end -->
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
     <!--recyclerview to display leaderboard list -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rr"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="152dp" />
+        app:layout_constraintTop_toBottomOf="@id/shimmerFrameLayout"
+        tools:layout_editor_absoluteY="152dp"
+        android:visibility="gone"/>
     <!--constraintlayout end -->
 </androidx.constraintlayout.widget.ConstraintLayout>
